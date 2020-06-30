@@ -1,0 +1,60 @@
+:root {
+  --time: 100ms;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+input {
+  height: 30px;
+  border: 1px solid #e0e0e0;
+}
+.input-group {
+  display: none;
+}
+.input-wrapper {
+  margin-bottom: 8px;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper {
+  position: relative;
+}
+.spinner {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  position: relative;
+  transition: all ease-in-out 10s;
+}
+
+#canvas {
+  position: absolute;
+  transform: translateY(-50%) translateX(-50%);
+  top: 50%;
+  left: 50%;
+}
+.pointed {
+  width: 50px;
+  height: 10px;
+  background: rgb(87, 46, 46);
+  position: absolute;
+  transform: translateY(-50%) translateX(-50%);
+  top: 50%;
+  right: -48px;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
